@@ -1,0 +1,12 @@
+@page "/ch01r07"
+@using Client.Data
+@rendermode InteractiveWebAssembly
+
+<Ticket Id="@Samples.Adult.Id">
+    @Samples.Adult.Tariff (@Samples.Adult.Price)
+</Ticket>
+<Ticket Id="@Samples.FreeAdmission.Id">
+    <div class="free-ticket">
+        @Samples.FreeAdmission.Tariff
+    </div>
+</Ticket>

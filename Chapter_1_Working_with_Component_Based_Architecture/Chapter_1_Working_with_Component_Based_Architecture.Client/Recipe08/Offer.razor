@@ -2,7 +2,7 @@
 @using Client.Data
 @rendermode InteractiveWebAssembly
 
-<Grid Data="@Samples.Tickets">
+<Grid Data="@Samples.Tickets" Context="ticket">
     <Header>
         <tr>
             <td>Ticket code</td>
@@ -13,10 +13,10 @@
     </Header>
     <Row>
         <tr>
-            <td>@context.Id</td>
-            <td>@context.Tariff</td>
-            <td>@context.Price</td>
-            <td @onclick="() => Add(context)">
+            <td>@ticket.Id</td>
+            <td>@ticket.Tariff</td>
+            <td>@ticket.Price</td>
+            <td @onclick="() => Add(ticket)">
                 Add to Cart
             </td>
         </tr>

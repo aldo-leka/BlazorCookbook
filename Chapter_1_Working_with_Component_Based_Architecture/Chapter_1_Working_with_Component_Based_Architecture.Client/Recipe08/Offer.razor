@@ -1,0 +1,29 @@
+@page "/ch01r08"
+@using Client.Data
+@rendermode InteractiveWebAssembly
+
+<Grid Data="@Samples.Tickets">
+    <Header>
+        <tr>
+            <td>Ticket code</td>
+            <td>Tariff</td>
+            <td>Price</td>
+            <td></td>
+        </tr>
+    </Header>
+    <Row>
+        <tr>
+            <td>@context.Id</td>
+            <td>@context.Tariff</td>
+            <td>@context.Price</td>
+            <td @onclick="() => Add(context)">
+                Add to Cart
+            </td>
+        </tr>
+    </Row>
+</Grid>
+
+@code {
+    public void Add(TicketViewModel ticket)
+        => Console.WriteLine($"Ticket {ticket.Id} added!");
+}

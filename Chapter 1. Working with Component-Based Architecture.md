@@ -1,5 +1,3 @@
-Chapter 1: Working with Component-Based Architecture
-
 @attribute [ExcludeFromInteractiveRouting]
 Is handy when you have global interactive mode and you want to exclude a component from it.
 

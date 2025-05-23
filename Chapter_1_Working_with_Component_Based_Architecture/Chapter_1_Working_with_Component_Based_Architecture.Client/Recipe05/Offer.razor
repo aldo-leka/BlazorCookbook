@@ -1,0 +1,16 @@
+@page "/ch01r05"
+@rendermode InteractiveWebAssembly
+
+@if (!RendererInfo.IsInteractive)
+{
+        <p>Getting ready...</p>
+        return;
+}
+
+<Ticket Tariff="Adult" Price="10.00m"
+        OnAdded="@Add" />
+<Ticket Tariff="Child" Price="5.00m" />
+@code {
+    private void Add()
+        => Console.WriteLine("Added to cart!");
+}

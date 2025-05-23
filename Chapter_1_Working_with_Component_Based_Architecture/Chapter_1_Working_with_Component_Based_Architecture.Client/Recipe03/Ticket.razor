@@ -1,0 +1,27 @@
+<div class="ticket">
+    <div class="name">@Tariff</div>
+    <div class="price">
+        @(Price.ToString("0.00 $"))
+    </div>
+    <div class="ticket-actions">
+        <button @onclick="@OnAdded">
+            Add to cart
+        </button>
+    </div>
+</div>
+
+@code {
+    [Parameter] public string Tariff { get; set; }
+    [Parameter] public decimal Price { get; set; }
+    /// <summary>
+    /// EventCallback type. It’s a Blazor-specific struct
+    /// that carries an invokable action with an additional
+    /// benefit. When you change the UI state, you should
+    /// use the StateHasChanged() life cycle method to
+    /// notify Blazor that something happened.
+    /// By design, EventCallback triggers StateHasChanged()
+    /// automatically, so you can’t omit it accidentally.
+    /// </summary>
+    [Parameter]
+    public EventCallback OnAdded { get; set; }
+}

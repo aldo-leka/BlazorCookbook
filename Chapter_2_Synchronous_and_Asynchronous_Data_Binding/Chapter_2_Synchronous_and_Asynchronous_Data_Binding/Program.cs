@@ -1,4 +1,4 @@
-using Chapter_2_Synchronous_and_Asynchronous_Data_Binding.Client.Pages;
+using Chapter_2_Synchronous_and_Asynchronous_Data_Binding.Client.Data;
 using Chapter_2_Synchronous_and_Asynchronous_Data_Binding.Components;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
+
+builder.Services.AddTransient<SuggestionsApi>();
 
 var app = builder.Build();
 

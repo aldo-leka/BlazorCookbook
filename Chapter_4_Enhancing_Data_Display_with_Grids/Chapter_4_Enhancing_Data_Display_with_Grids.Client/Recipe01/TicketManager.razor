@@ -1,0 +1,16 @@
+@page "/ch04r01"
+@using Chapter_4_Enhancing_Data_Display_with_Grids.Client.Data
+<Grid Data="@Tickets.All">
+    <Header>
+        <tr>
+            <td>Tariff</td>
+            <td>Price</td>
+        </tr>
+    </Header>
+    <Row>
+        <tr>
+            <td>@context.Tariff</td>
+            <td>@context.Price</td>
+        </tr>
+    </Row>
+</Grid>

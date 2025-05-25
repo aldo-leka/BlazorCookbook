@@ -1,6 +1,5 @@
 using Chapter_5_Managing_Application_State.Client.Data;
 using Chapter_5_Managing_Application_State.Client.Recipe04;
-using Chapter_5_Managing_Application_State.Client.Recipe05;
 using Chapter_5_Managing_Application_State.Components;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,7 +11,8 @@ builder.Services.AddRazorComponents()
 
 builder.Services.AddScoped<Api>();
 builder.Services.AddScoped<OverlayState>();
-builder.Services.AddTransient<BrowserStorage>();
+builder.Services.AddTransient<Chapter_5_Managing_Application_State.Client.Recipe05.BrowserStorage>();
+builder.Services.AddTransient<Chapter_5_Managing_Application_State.Client.Recipe06.BrowserStorage>();
 
 var app = builder.Build();
 

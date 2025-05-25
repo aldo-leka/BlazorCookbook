@@ -1,4 +1,5 @@
 using Chapter_5_Managing_Application_State.Client.Data;
+using Chapter_5_Managing_Application_State.Client.Recipe04;
 using Chapter_5_Managing_Application_State.Components;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,7 @@ builder.Services.AddRazorComponents()
     .AddInteractiveWebAssemblyComponents();
 
 builder.Services.AddScoped<Api>();
+builder.Services.AddScoped<OverlayState>();
 
 var app = builder.Build();
 

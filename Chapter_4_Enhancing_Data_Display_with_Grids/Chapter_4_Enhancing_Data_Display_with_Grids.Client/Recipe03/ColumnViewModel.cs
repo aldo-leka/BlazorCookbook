@@ -1,0 +1,10 @@
+using Microsoft.AspNetCore.Components;
+
+namespace Chapter_4_Enhancing_Data_Display_with_Grids.Client.Recipe03;
+
+public class ColumnViewModel<T>
+{
+    public string Label { get; init; }
+    public RenderFragment<T> Template { get; init; }
+    public EventCallback OnSort { get; init; }
+}

@@ -1,4 +1,3 @@
-@using Chapter_4_Enhancing_Data_Display_with_Grids.Client.Recipe02
 @typeparam T
 @attribute [CascadingTypeParameter(nameof(T))]
 
@@ -14,7 +13,7 @@
     </tr>
     </thead>
     <tbody>
-    @foreach (var element in Data)
+    @foreach (var element in Set)
     {
         <tr>
             @foreach (var column in Columns)
@@ -25,6 +24,10 @@
     }
     </tbody>
 </table>
+
+<hr />
+<Paginator Paginate="@LoadAsync"
+           DataSize="@Data.Count"/>
 
 <CascadingValue Value="this">
     @ChildContent
@@ -44,5 +47,15 @@
         bool firstRender)
     {
         if (firstRender) StateHasChanged();
+    }
+    
+    protected IEnumerable<T> Set = [];
+    
+    public Task LoadAsync(PaginateEventArgs args)
+    {
+        Set = Data
+            .Skip((args.Page - 1) * args.Size)
+            .Take(args.Size);
+        return Task.CompletedTask;
     }
 }

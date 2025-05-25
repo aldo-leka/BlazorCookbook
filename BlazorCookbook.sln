@@ -20,6 +20,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter_5_Managing_Applicat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter_5_Managing_Application_State.Client", "Chapter_5_Managing_Application_State\Chapter_5_Managing_Application_State.Client\Chapter_5_Managing_Application_State.Client.csproj", "{1024852E-2B07-45B4-BF6A-BA91FE86C47F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter_6_Building_Interactive_Forms", "Chapter_6_Building_Interactive_Forms\Chapter_6_Building_Interactive_Forms\Chapter_6_Building_Interactive_Forms.csproj", "{53877B1E-573E-406C-A9CE-98022677C127}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter_6_Building_Interactive_Forms.Client", "Chapter_6_Building_Interactive_Forms\Chapter_6_Building_Interactive_Forms.Client\Chapter_6_Building_Interactive_Forms.Client.csproj", "{CFBE48B1-9469-49E4-AD7E-930E24FF4AFE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,5 +70,13 @@ Global
 		{1024852E-2B07-45B4-BF6A-BA91FE86C47F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1024852E-2B07-45B4-BF6A-BA91FE86C47F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1024852E-2B07-45B4-BF6A-BA91FE86C47F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53877B1E-573E-406C-A9CE-98022677C127}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53877B1E-573E-406C-A9CE-98022677C127}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53877B1E-573E-406C-A9CE-98022677C127}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53877B1E-573E-406C-A9CE-98022677C127}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFBE48B1-9469-49E4-AD7E-930E24FF4AFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFBE48B1-9469-49E4-AD7E-930E24FF4AFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFBE48B1-9469-49E4-AD7E-930E24FF4AFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFBE48B1-9469-49E4-AD7E-930E24FF4AFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,4 +1,4 @@
-using Chapter_4_Enhancing_Data_Display_with_Grids.Client.Pages;
+using Chapter_4_Enhancing_Data_Display_with_Grids.Client.Data;
 using Chapter_4_Enhancing_Data_Display_with_Grids.Components;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
+
+builder.Services.AddScoped<TicketsApi>();
 
 var app = builder.Build();
 

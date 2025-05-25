@@ -1,0 +1,21 @@
+@page "/ch04r05"
+@using Chapter_4_Enhancing_Data_Display_with_Grids.Client.Data
+@rendermode InteractiveWebAssembly
+@inject TicketsApi Tickets
+
+<Grid Provider="@Tickets.GetAsync">
+    <Header>
+        <tr>
+            <td>Id</td>
+            <td>Tariff</td>
+            <td>Price</td>
+        </tr>
+    </Header>
+    <Row>
+        <tr>
+            <td>@context.Id</td>
+            <td>@context.Tariff</td>
+            <td>@context.Price</td>
+        </tr>
+    </Row>
+</Grid>

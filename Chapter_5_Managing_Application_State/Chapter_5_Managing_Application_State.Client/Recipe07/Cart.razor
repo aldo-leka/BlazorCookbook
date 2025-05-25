@@ -1,0 +1,8 @@
+@page "/ch05r07"
+@rendermode InteractiveAuto
+@inherits CrossingInteractiveBoundary<CartState>
+
+<button @onclick="@(() => State.Add())">
+    Add to cart
+</button>
+<p>Last cart change: @State.UpdateTime</p>

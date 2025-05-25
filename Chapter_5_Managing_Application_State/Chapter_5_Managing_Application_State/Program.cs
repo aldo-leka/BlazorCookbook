@@ -1,5 +1,6 @@
 using Chapter_5_Managing_Application_State.Client.Data;
 using Chapter_5_Managing_Application_State.Client.Recipe04;
+using Chapter_5_Managing_Application_State.Client.Recipe07;
 using Chapter_5_Managing_Application_State.Components;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,9 @@ builder.Services.AddScoped<Api>();
 builder.Services.AddScoped<OverlayState>();
 builder.Services.AddTransient<Chapter_5_Managing_Application_State.Client.Recipe05.BrowserStorage>();
 builder.Services.AddTransient<Chapter_5_Managing_Application_State.Client.Recipe06.BrowserStorage>();
+builder.Services
+    .AddCascadingValue(it => new CartState());
+builder.Services.AddTransient<Chapter_5_Managing_Application_State.Client.Recipe07.BrowserStorage>();
 
 var app = builder.Build();
 

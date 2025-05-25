@@ -1,0 +1,19 @@
+@page "/ch04r04"
+@using Chapter_4_Enhancing_Data_Display_with_Grids.Client.Data
+@rendermode InteractiveWebAssembly
+
+<Grid Data="@Tickets.All">
+    <Column Property="@(it => it.Tariff)"
+            Label="Tariff">
+        @context.Tariff
+    </Column>
+    <Column Property="@(it => it.Price)"
+            Label="Price">
+        @context.Price
+    </Column>
+</Grid>
+
+@code {
+    private void Sort(string prop)
+        => Console.WriteLine($"Sorted by {prop}!");
+}

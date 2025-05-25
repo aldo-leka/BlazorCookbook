@@ -1,0 +1,22 @@
+@page "/ch04r06"
+@using Chapter_4_Enhancing_Data_Display_with_Grids.Client.Data
+@using Microsoft.AspNetCore.Components.QuickGrid
+@rendermode InteractiveWebAssembly
+@inject TicketsApi Tickets
+
+<QuickGrid Class="w-100 table table-bordered"
+           Items="@Tickets.Get()"
+           Pagination="@Pagination">
+    <PropertyColumn Property="@(x => x.Tariff)"
+                    Sortable="true" />
+    <PropertyColumn Property="@(x => x.Price)"
+                    Sortable="true" Format="0.00" />
+</QuickGrid>
+<Paginator State="@Pagination" />
+
+@code {
+    protected PaginationState Pagination = new()
+    {
+        ItemsPerPage = 5
+    };
+}

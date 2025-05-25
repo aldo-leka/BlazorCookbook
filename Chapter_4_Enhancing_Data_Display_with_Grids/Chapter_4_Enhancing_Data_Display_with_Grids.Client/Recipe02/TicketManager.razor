@@ -1,0 +1,19 @@
+@page "/ch04r02"
+@using Chapter_4_Enhancing_Data_Display_with_Grids.Client.Data
+@rendermode InteractiveWebAssembly
+
+<Grid2 Data="@Tickets.All">
+    <Column OnSort="@(() => Sort(nameof(Ticket.Tariff)))"
+            Label="Tariff">
+        @context.Tariff
+    </Column>
+    <Column OnSort="@(() => Sort(nameof(Ticket.Price)))"
+            Label="Price">
+        @context.Price
+    </Column>
+</Grid2>
+
+@code {
+    private void Sort(string prop)
+        => Console.WriteLine($"Sorted by {prop}!");
+}

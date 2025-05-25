@@ -1,0 +1,23 @@
+@using Chapter_4_Enhancing_Data_Display_with_Grids.Client.Data
+@typeparam T
+@code {
+    [CascadingParameter]
+    public Grid2<T> Grid { get; set; }
+    [Parameter, EditorRequired]
+    public string Label { get; set; }
+    [Parameter, EditorRequired]
+    public RenderFragment<T> ChildContent { get; set; }
+    [Parameter]
+    public EventCallback OnSort { get; set; }
+    
+    protected override void OnInitialized()
+    {
+        var model = new ColumnViewModel<T>
+        {
+            Label = Label,
+            Template = ChildContent,
+            OnSort = OnSort
+        };
+        Grid.AddColumn(model);
+    }
+}

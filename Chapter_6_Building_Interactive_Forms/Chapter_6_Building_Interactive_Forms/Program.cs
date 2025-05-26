@@ -1,4 +1,4 @@
-using Chapter_6_Building_Interactive_Forms.Client.Pages;
+using Chapter_6_Building_Interactive_Forms.Client.Data;
 using Chapter_6_Building_Interactive_Forms.Components;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
+
+builder.Services.AddTransient<FileStorage>();
 
 var app = builder.Build();
 

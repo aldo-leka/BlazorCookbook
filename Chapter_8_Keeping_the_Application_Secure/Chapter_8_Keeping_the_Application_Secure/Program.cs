@@ -17,7 +17,7 @@ builder.Services.AddRazorComponents()
 builder.Services.AddCascadingAuthenticationState();
 builder.Services.AddScoped<IdentityUserAccessor>();
 builder.Services.AddScoped<IdentityRedirectManager>();
-builder.Services.AddScoped<AuthenticationStateProvider, IdentityRevalidatingAuthenticationStateProvider>();
+builder.Services.AddScoped<AuthenticationStateProvider, PersistingRevalidatingAuthenticationStateProvider>();
 
 builder.Services.AddAuthentication(options =>
     {
@@ -40,6 +40,13 @@ builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.Requ
     .AddDefaultTokenProviders();
 
 builder.Services.AddSingleton<IEmailSender<ApplicationUser>, IdentityNoOpEmailSender>();
+
+builder.Services
+    .AddAuthorizationBuilder()
+    .AddPolicy("InternalEmployee",
+        policy => policy.RequireAssertion(context =>
+            context.User?.Identity?.Name?
+                .EndsWith("@packt.com") ?? false));
 
 var app = builder.Build();
 

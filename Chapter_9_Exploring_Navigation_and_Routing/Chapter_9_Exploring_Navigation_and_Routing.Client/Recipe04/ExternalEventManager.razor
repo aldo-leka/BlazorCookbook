@@ -1,0 +1,25 @@
+@attribute [Route(DeepLinks.LandingPage)]
+@attribute [Route(DeepLinks.EventPage)]
+@attribute [Route(DeepLinks.EventAtVenuePage)]
+
+<hr />
+<p>Route examples</p>
+<p><a href="/ch09r04/@Guid.NewGuid()">Specific event</a></p>
+<p><a href="/ch09r04/@Guid.NewGuid()/venues/museum">Specific event at venue</a></p>
+<p><a href="/ch09r04/@Guid.NewGuid()?date=@DateTime.Today.ToString("yyyy-MM-dd")">Specific event on date</a></p>
+<hr />
+
+@if (EventId == default) return;
+<p>Event ID: @EventId</p>
+<p>In @(Venue ?? "all venues")</p>
+
+@if (Date == default) return;
+<p>On @Date</p>
+
+@code {
+    [Parameter] public Guid EventId { get; set; }
+    [Parameter] public string Venue { get; set; }
+    
+    [SupplyParameterFromQuery]
+    public DateTime Date { get; set; }
+}

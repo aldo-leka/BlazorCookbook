@@ -36,6 +36,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter_9_Exploring_Navigat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter_9_Exploring_Navigation_and_Routing.Client", "Chapter_9_Exploring_Navigation_and_Routing\Chapter_9_Exploring_Navigation_and_Routing.Client\Chapter_9_Exploring_Navigation_and_Routing.Client.csproj", "{4F0BA9AD-4809-40AA-A300-B0423BB454D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter_9_Exploring_Navigation_and_Routing.Library", "Chapter_9_Exploring_Navigation_and_Routing.Library\Chapter_9_Exploring_Navigation_and_Routing.Library.csproj", "{95E78712-52DA-4348-996F-37BA5520A783}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -114,5 +116,9 @@ Global
 		{4F0BA9AD-4809-40AA-A300-B0423BB454D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F0BA9AD-4809-40AA-A300-B0423BB454D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F0BA9AD-4809-40AA-A300-B0423BB454D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95E78712-52DA-4348-996F-37BA5520A783}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95E78712-52DA-4348-996F-37BA5520A783}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95E78712-52DA-4348-996F-37BA5520A783}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95E78712-52DA-4348-996F-37BA5520A783}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

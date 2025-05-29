@@ -7,6 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\..\Chapter_9_Exploring_Navigation_and_Routing.Library\Chapter_9_Exploring_Navigation_and_Routing.Library.csproj" />
         <ProjectReference Include="..\Chapter_9_Exploring_Navigation_and_Routing.Client\Chapter_9_Exploring_Navigation_and_Routing.Client.csproj"/>
         <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="9.0.5"/>
     </ItemGroup>

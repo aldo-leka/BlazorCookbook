@@ -45,6 +45,8 @@
     
     private async Task GetAsync()
     {
+        _cts?.Cancel();
+        _cts?.Dispose();
         _cts = new();
         var eventId = await Source.LoadAsync(_cts.Token);
         if (_cts.IsCancellationRequested) return;

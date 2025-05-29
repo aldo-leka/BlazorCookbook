@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Chapter_10_Integrating_with_OpenAI.Client\Chapter_10_Integrating_with_OpenAI.Client.csproj"/>
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="9.0.5"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference
+                Include= "..\..\SmartComponents\SmartComponents.AspNetCore\SmartComponents.AspNetCore.csproj" />
+        <ProjectReference
+                Include= "..\..\SmartComponents\SmartComponents.Inference.OpenAI\SmartComponents.Inference.OpenAI.csproj" />
+    </ItemGroup>
+
+</Project>

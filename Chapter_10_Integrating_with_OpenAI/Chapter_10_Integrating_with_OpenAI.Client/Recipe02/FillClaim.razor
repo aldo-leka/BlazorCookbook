@@ -1,0 +1,26 @@
+@page "/ch10r02"
+@using Chapter_10_Integrating_with_OpenAI.Client.Data
+@using SmartComponents
+
+<EditForm Model="@Claim" FormName="claim-form">
+    <p>
+        Event name:
+        <InputText @bind-Value="@Claim.Event" />
+    </p>
+    <p>Date: <InputText @bind-Value="@Claim.Date" /></p>
+    <p>
+        Customer name:
+        <InputText @bind-Value="@Claim.Customer.Name" />
+    </p>
+    <p>
+        Customer email:
+        <InputText @bind-Value="@Claim.Customer.Email" />
+    </p>
+    <button type="submit">Submit</button>
+    <SmartPasteButton DefaultIcon />
+</EditForm>
+
+@code {
+    [SupplyParameterFromForm]
+    public ClaimViewModel Claim { get; set; } = new();
+}

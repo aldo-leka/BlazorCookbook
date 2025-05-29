@@ -38,6 +38,22 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter_9_Exploring_Navigat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter_9_Exploring_Navigation_and_Routing.Library", "Chapter_9_Exploring_Navigation_and_Routing.Library\Chapter_9_Exploring_Navigation_and_Routing.Library.csproj", "{95E78712-52DA-4348-996F-37BA5520A783}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter_10_Integrating_with_OpenAI", "Chapter_10_Integrating_with_OpenAI\Chapter_10_Integrating_with_OpenAI\Chapter_10_Integrating_with_OpenAI.csproj", "{495D675E-9E72-4137-BDB1-4CFDBC59C019}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter_10_Integrating_with_OpenAI.Client", "Chapter_10_Integrating_with_OpenAI\Chapter_10_Integrating_with_OpenAI.Client\Chapter_10_Integrating_with_OpenAI.Client.csproj", "{9AF193A9-14A2-4016-B616-C238EDEFCCB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartComponents.AspNetCore", "SmartComponents\SmartComponents.AspNetCore\SmartComponents.AspNetCore.csproj", "{86EE4C18-505C-4686-853A-656A6B9F6FC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartComponents.AspNetCore.Components", "SmartComponents\SmartComponents.AspNetCore.Components\SmartComponents.AspNetCore.Components.csproj", "{D510DFC7-B783-4622-AB86-6718B1088DB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartComponents.Inference", "SmartComponents\SmartComponents.Inference\SmartComponents.Inference.csproj", "{C5416720-5A34-4361-88C5-5A753E56F1E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartComponents.Inference.OpenAI", "SmartComponents\SmartComponents.Inference.OpenAI\SmartComponents.Inference.OpenAI.csproj", "{60E0B746-DB5B-4A8A-AE7B-CCD9553F3BC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartComponents.LocalEmbeddings", "SmartComponents\SmartComponents.LocalEmbeddings\SmartComponents.LocalEmbeddings.csproj", "{BB27D665-59A9-4FED-89D2-2514A50C565E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartComponents.StaticAssets", "SmartComponents\SmartComponents.StaticAssets\SmartComponents.StaticAssets.csproj", "{FAB6DBCB-F463-4FBA-9F1C-15CA8F3AFF6F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -120,5 +136,37 @@ Global
 		{95E78712-52DA-4348-996F-37BA5520A783}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95E78712-52DA-4348-996F-37BA5520A783}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95E78712-52DA-4348-996F-37BA5520A783}.Release|Any CPU.Build.0 = Release|Any CPU
+		{495D675E-9E72-4137-BDB1-4CFDBC59C019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{495D675E-9E72-4137-BDB1-4CFDBC59C019}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{495D675E-9E72-4137-BDB1-4CFDBC59C019}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{495D675E-9E72-4137-BDB1-4CFDBC59C019}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AF193A9-14A2-4016-B616-C238EDEFCCB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AF193A9-14A2-4016-B616-C238EDEFCCB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AF193A9-14A2-4016-B616-C238EDEFCCB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AF193A9-14A2-4016-B616-C238EDEFCCB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86EE4C18-505C-4686-853A-656A6B9F6FC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86EE4C18-505C-4686-853A-656A6B9F6FC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86EE4C18-505C-4686-853A-656A6B9F6FC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86EE4C18-505C-4686-853A-656A6B9F6FC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D510DFC7-B783-4622-AB86-6718B1088DB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D510DFC7-B783-4622-AB86-6718B1088DB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D510DFC7-B783-4622-AB86-6718B1088DB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D510DFC7-B783-4622-AB86-6718B1088DB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5416720-5A34-4361-88C5-5A753E56F1E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5416720-5A34-4361-88C5-5A753E56F1E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5416720-5A34-4361-88C5-5A753E56F1E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5416720-5A34-4361-88C5-5A753E56F1E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60E0B746-DB5B-4A8A-AE7B-CCD9553F3BC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60E0B746-DB5B-4A8A-AE7B-CCD9553F3BC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60E0B746-DB5B-4A8A-AE7B-CCD9553F3BC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60E0B746-DB5B-4A8A-AE7B-CCD9553F3BC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB27D665-59A9-4FED-89D2-2514A50C565E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB27D665-59A9-4FED-89D2-2514A50C565E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB27D665-59A9-4FED-89D2-2514A50C565E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB27D665-59A9-4FED-89D2-2514A50C565E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAB6DBCB-F463-4FBA-9F1C-15CA8F3AFF6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAB6DBCB-F463-4FBA-9F1C-15CA8F3AFF6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAB6DBCB-F463-4FBA-9F1C-15CA8F3AFF6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAB6DBCB-F463-4FBA-9F1C-15CA8F3AFF6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

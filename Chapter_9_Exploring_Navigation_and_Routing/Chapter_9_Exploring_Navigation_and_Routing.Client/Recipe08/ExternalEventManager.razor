@@ -1,0 +1,62 @@
+@attribute [Route(DeepLinks.LandingPage)]
+@attribute [Route(DeepLinks.EventPage)]
+@attribute [Route(DeepLinks.EventAtVenuePage)]
+
+@rendermode InteractiveWebAssembly
+@implements IDisposable
+
+<hr />
+<p>Route examples</p>
+<p><a href="@DeepLinks.GetPage(Guid.NewGuid())">Specific event</a></p>
+<p><a href="@DeepLinks.GetPage(Guid.NewGuid())/venues/museum">Specific event at venue</a></p>
+<p><a href="@DeepLinks.GetPage(Guid.NewGuid())?date=@DateTime.Today.ToString("yyyy-MM-dd")">Specific event on date</a></p>
+<hr />
+
+@if (EventId == default)
+{
+    <button class="btn btn-primary"
+            @onclick="@GetAsync">
+        Get event
+    </button>
+    return;
+}
+
+<p>Event ID: @EventId</p>
+<p>In @(Venue ?? "all venues")</p>
+
+@if (Date == default) return;
+<p>On @Date</p>
+
+@code {
+    [Inject] private NavigationManager Nav { get; init; }
+    private CancellationTokenSource _cts;
+    
+    [Parameter] public Guid EventId { get; set; }
+    [Parameter] public string Venue { get; set; }
+    
+    [SupplyParameterFromQuery]
+    public DateTime Date { get; set; }
+    
+    private void CancelTask(object sender,
+        LocationChangedEventArgs args) => _cts?.Cancel();
+    
+    protected override void OnInitialized()
+        => Nav.LocationChanged += CancelTask;
+    
+    private async Task GetAsync()
+    {
+        _cts?.Cancel();
+        _cts?.Dispose();
+        _cts = new();
+        var eventId = await Source.LoadAsync(_cts.Token);
+        if (_cts.IsCancellationRequested) return;
+        Nav.NavigateTo($"/ch09r08/{eventId}",
+            replace: true);
+    }
+    
+    public void Dispose()
+    {
+        Nav.LocationChanged -= CancelTask;
+        _cts?.Dispose();
+    }
+}

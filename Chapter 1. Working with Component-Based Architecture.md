@@ -34,19 +34,13 @@ How it looks like:
 [Parameter, EditorRequired]
 public RenderFragment ChildContent { get; set; }
 ```
-ChildContent is a special reserved name in Blazor where you don't need to say ```html
-<ChildContent>
-``` when using it but can just put the content between the component tags.
+ChildContent is a special reserved name in Blazor where you don't need to say ```<ChildContent>``` when using it but can just put the content between the component tags.
 
-With ```csharp
-@typeparam T
-```, you can make a component generic.
+With ```@typeparam T```, you can make a component generic.
 
 In Blazor WebAssembly, you can see your logs in the browser console, not in the IDE console.
 
-Context parameter is available on any component that has ```csharp
-RenderFragment<T>
-``` parameters. It's used to be more explicit with the naming of the context and to tell contexts apart when there can be clashes (multiple potential contexts).
+Context parameter is available on any component that has ```RenderFragment<T>``` parameters. It's used to be more explicit with the naming of the context and to tell contexts apart when there can be clashes (multiple potential contexts).
 
 DynamicComponent is used to render a component at runtime based on a Type parameter.
 Sample usage:

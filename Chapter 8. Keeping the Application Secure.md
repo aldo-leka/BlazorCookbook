@@ -8,17 +8,8 @@ public class Settings : ComponentBase
 }
 ```
 
-Apart from ```csharp
-ChildContent
-```, ```csharp
-AuthorizeView
-``` supports providing the ```csharp
-Authorized
-```, ```csharp
-Authorizing
-```, and ```csharp
-NotAuthorized
-``` fragments explicitly. With that, you can define distinct content for authenticated and unauthenticated users within the same component.
+Apart from ```ChildContent```, ```AuthorizeView``` supports providing the ```Authorized```, ```Authorizing```, and ```NotAuthorized``` fragments explicitly. With that, you can define distinct content for authenticated and unauthenticated users within the same component.
+
 Example:
 ```html
 <h3>Settings</h3>

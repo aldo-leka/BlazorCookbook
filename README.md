@@ -1,4 +1,4 @@
-# 📚 Blazor Web Development Cookbook - Table of Contents
+# 📚 Blazor Web Development Cookbook - ToC
 
 ## 📖 Chapter 1: Working with Component-Based Architecture
 
